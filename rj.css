@@ -1,0 +1,53 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+    font-family: 'Arial', sans-serif;
+    perspective: 1000px; /* Enable 3D transforms */
+}
+
+/* Container for the animated name */
+.container {
+    perspective: 1000px;
+}
+
+/* Style for the name */
+.animated-name {
+    font-size: 3em;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    animation: rotate3D 10s infinite linear;
+    display: inline-block;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* 3D Rotate Animation */
+@keyframes rotate3D {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    25% {
+        transform: rotateX(360deg) rotateY(0deg);
+    }
+    50% {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+    75% {
+        transform: rotateX(0deg) rotateY(360deg);
+    }
+    100% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+}
